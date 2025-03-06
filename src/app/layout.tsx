@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Raleway, Inter } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation"; // Use both usePathname & useRouter
-import { Home, Users, Trophy, User, ArrowLeft, Settings } from "lucide-react"; // Import icons
+import { Home, Users, Trophy, User, ArrowLeft } from "lucide-react"; // Import icons
 import "./globals.css";
 
 const raleway = Raleway({
@@ -46,21 +46,18 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className={`${raleway.variable} ${inter.variable} antialiased flex flex-col min-h-screen bg-custom m-0 p-0`}>
 
-        {/* 🔹 Header with Go Back Button */}
-        <header className="bg-navbar fixed top-0 left-0 w-full h-14 p-4 mx-auto rounded-b-lg flex items-center">
-          {/* Show 'Go Back' button only if NOT on the homepage */}
-          {pathname !== "/" && (
-            <button 
-              onClick={handleGoBack} 
-              className="p-2 rounded-md transition"
-            >
-              <ArrowLeft size={24} className="text-icon"/>
-            </button>
-          )}
-        </header>
+        {/* 🔹 Back Arrow (Placed Inside Content, No Header) */}
+        {pathname !== "/" && (
+          <button 
+            onClick={handleGoBack} 
+            className="fixed top-4 left-4 p-2 rounded-md transition text-icon"
+          >
+            <ArrowLeft size={24} />
+          </button>
+        )}
 
         {/* 🔹 Main Content */}
-        <main className="flex-1 w-full pt-16">{children}</main>
+        <main className="flex-1 w-full">{children}</main>
 
         {/* 🔹 Navigation Bar */}
         <nav className="bg-navbar fixed bottom-0 left-0 w-full h-14 p-4 flex justify-around rounded-t-lg">
