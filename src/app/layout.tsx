@@ -44,6 +44,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="h-full">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={`${raleway.variable} ${inter.variable} antialiased flex flex-col min-h-screen bg-custom m-0 p-0`}>
 
         {/* 🔹 Back Arrow (Placed Inside Content, No Header) */}
