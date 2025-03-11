@@ -1,0 +1,25 @@
+{
+    "name": "Bouvet app test",
+    "short_name": "Bouvet-app",
+    "theme_color": "#00ff00",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "any",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "/Ikon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "screenshots": [
+        {
+        "src": "/Ikon-wide.png",
+        "sizes": "1600x800",
+        "type": "image/png",
+        "form_factor": "wide"
+        }
+    ]
+  }
